@@ -21,7 +21,11 @@ list_rows = df_file_content['name']
 list_rows2 = df_file_content2['name']
 
 for row in list_rows2:
-    found = False
+    # found = False
+    if row in list_rows:
+    	print(row, "Found...")
+
+    '''
     for row1 in list_rows:
         if row == row1:
             print(row, "Found!")
@@ -29,4 +33,5 @@ for row in list_rows2:
             break
 
     if found == False:
-        print(row, "Not found!")
+        print(row, "Not found!")'''
+
