@@ -4,29 +4,30 @@
 from pandas import read_csv
 import pandas as pd
 
-filename = 'sample_data.csv'
-
-df_file_content = pd.read_csv( filename )
-
-print( df_file_content )
-
-filename2 = 'sample_data2.csv'
-
-df_file_content2 = pd.read_csv( filename2 )
-
-print( df_file_content2 )
 
 
-list_rows = df_file_content['name']
-list_rows2 = df_file_content2['name']
+file1 = 'sample_data.csv'
+file2 = 'sample_data2.csv'
+file3 = 'sample_data3.csv'
 
-for row in list_rows2:
-    found = False
-    for row1 in list_rows:
-        if row == row1:
-            print(row, "Found!")
-            found = True
-            break
+elements_file1 = pd.read_csv( file1 )['name']
+elements_file2 = pd.read_csv( file2 )['name']
+elements_file3 = pd.read_csv( file3 )['name']
 
-    if found == False:
-        print(row, "Not found!")
+tetha = elements_file1 + elements_file2 + elements_file3
+
+n_tetha = len(tetha)
+F = [file1, file2, file3]
+y[len(F)][n_tetha]
+
+for i in tetha:
+    for j in F:
+        for k in F[j]:
+            if F[j][k] == tetha[i] :
+                y[j][i] = 1
+                break
+
+        y[j][i] = 0
+
+print( y )
+
