@@ -42,4 +42,3 @@ for i in range(len(tetha)):
 for items in y:
     print(items)
 
-
