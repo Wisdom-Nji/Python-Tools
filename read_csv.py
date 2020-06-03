@@ -17,7 +17,7 @@ elements_file3 = pd.read_csv( file3 )['name'].tolist()
 # print (type(elements_file1))
 
 tetha = list(set(elements_file1 + elements_file2 + elements_file3))
-print( tetha )
+# print( tetha )
 
 n_tetha = len(tetha)
 F = [elements_file1, elements_file2, elements_file3]
@@ -28,11 +28,18 @@ y = []
 
 for i in range(len(tetha)):
     for j in range(len(F)):
+        found = False
         for k in range(len(F[j])):
             if F[j][k] == tetha[i] :
                 y.append([list_file[j],tetha[i],1])
+                found = True
                 break
 
-        y.append([list_file[j],tetha[i],0])
+        if found == False :
+            y.append([list_file[j],tetha[i],0])
 
-print( y )
+
+for items in y:
+    print(items)
+
+
