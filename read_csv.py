@@ -26,11 +26,11 @@ list_file = [file1, file2, file3]
 
 y = []
 
-for i in range(len(tetha)): '''selcting nth item from tether'''
-    for j in range(len(F)): '''select jth file from File contents'''
+for i in range(len(tetha)):
+    for j in range(len(F)):
         found = False
-        for k in range(len(F[j])): '''select kth item from file contents'''
-            if F[j][k] == tetha[i] : '''checks kth item from file contents against nth item from tetha'''
+        for k in range(len(F[j])):
+            if F[j][k] == tetha[i] :
                 # y.append([list_file[j],tetha[i],1])
                 y.append([list_file[j], tetha[i], 1])
                 found = True
